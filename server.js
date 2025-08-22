@@ -23,7 +23,7 @@ app.use(morgan("tiny"))
 
 const allowedOrigins = [
   "http://localhost:5173",
-  "https://to-do-frontend-black.vercel.app",
+  "https://online-test-frontend-9isb.vercel.app",
 ];
 
 app.use(cors({
