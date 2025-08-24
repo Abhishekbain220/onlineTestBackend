@@ -24,6 +24,7 @@ app.use(morgan("tiny"))
 const allowedOrigins = [
   "http://localhost:8080",
   "https://online-test-frontend-9isb.vercel.app",
+  "https://test-spark-platform-89-main.vercel.app"
 ];
 
 app.use(cors({
