@@ -11,7 +11,9 @@ router.post("/upload", upload.single("file"), async (req, res) => {
     const workbook = XLSX.readFile(req.file.path);
     const sheet = workbook.Sheets[workbook.SheetNames[0]];
     const data = XLSX.utils.sheet_to_json(sheet);
-    await MCQ.insertMany(data);
+    let mcq=await MCQ.create({questions:data});
+    
+    console.log(mcq)
     res.json({ success: true, count: data.length });
   } catch (error) {
     res.status(500).json({ error: error.message });
